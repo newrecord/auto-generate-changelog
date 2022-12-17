@@ -1,3 +1,12 @@
+#### 2022-12-17
+
+##### Other Changes
+
+*  change log (b7761540)
+*  readme (7759e77b)
+*  project (858c01de)
+*  .gitignore (ba123049)
+
 ## What's Changed
 * add: readme by @newrecord in https://github.com/newrecord/auto-generate-changelog/pull/1
 * add: relase v1 by @newrecord in https://github.com/newrecord/auto-generate-changelog/pull/2
