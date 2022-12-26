@@ -1,0 +1,28 @@
+name: Build android
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+jobs:
+  build:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: self-hosted
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: clean
+      run: ./gradlew clean
+      
+    - name: assemble debug
+      run: ./gradlew assembleDebug
+      
+    - uses: actions/upload-artifact@v3
+      with:
+        name: app-debug.apk
+        path: ./app/build/outputs/apk/debug/app-debug.apk
