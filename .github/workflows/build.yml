@@ -1,14 +1,15 @@
 name: Build android
 
 on:
+  push:
+    paths-ignore:
+      - '**.md'
   pull_request:
     types:
       - opened
       - reopened
       - synchronize
       - ready_for_review
-    paths-ignore:
-      - '**.md'
 
 jobs:
   build:
