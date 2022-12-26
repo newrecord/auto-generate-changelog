@@ -19,5 +19,5 @@ jobs:
       
     - uses: actions/upload-artifact@v3
       with:
-        name: app-debug-${{ github.head_ref }}.apk
+        name: app-debug-${{ github.event.pull_request.head.sha }}.apk
         path: ./app/build/outputs/apk/debug/app-debug.apk
