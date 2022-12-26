@@ -2,6 +2,8 @@ name: Build android
 
 on:
   pull_request:
+    paths-ignore:
+      - '**.md'
     types:
       - opened
       - reopened
@@ -24,5 +26,5 @@ jobs:
       
     - uses: actions/upload-artifact@v3
       with:
-        name: app-debug.apk
+        name: app-debug-PR-${{ github.event.number }}-${{ github.event.pull_request.head.sha }}.apk
         path: ./app/build/outputs/apk/debug/app-debug.apk
