@@ -11,3 +11,6 @@ jobs:
     
     - name: clean
       run: ./gradlew clean
+      
+    - name: assemble debug
+      run: ./gradlew assembleDebug
